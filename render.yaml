@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: weatherbot-intelligent
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: OPENWEATHER_API_KEY
+        sync: false
